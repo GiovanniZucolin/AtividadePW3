@@ -1,3 +1,31 @@
+:root {
+    --verde: #8dccad;
+    --musgo: #988864;
+    --rosa: #fea6a2;
+    --bege: #f9d6ac;
+    --amarelo: #ffe9af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 body{
-    background: red;
+    background-color: var(--bege);
+}
+
+.nav-menu {
+    background-color: var(--verde);
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav-menu ul li a {
+    color: #353232;
 }

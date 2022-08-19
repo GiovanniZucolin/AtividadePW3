@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="nav-menu">
             <ul>
                 <li> <a href="/"> Home </a> </li>
                 <li> <a href="/contato"> Contato </a> </li>
