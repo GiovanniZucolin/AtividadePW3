@@ -18,7 +18,7 @@ body{
 }
 
 .nav-menu {
-    background-color: var(--verde);
+    background-color: var(--musgo);
 }
 
 .nav-menu ul li {
@@ -40,6 +40,9 @@ h1 {
     font-weight: 400;
     font-size: 32px;
 }
+
+
+/* Pagina Produtos */
 
 .form-produtos {
     text-align: center;
@@ -101,11 +104,143 @@ h1 {
     transition: 1s;
 }
 
+/* Pagina Home */
+
+.sec-home {
+	text-align: center;
+}
+
+.imgPrincipal {
+	max-width: 700px;
+	max-height: 350px;
+	margin: 5%;
+}
+
+
+/* Pagina Cliente */
+
+
+.form-box {
+	width: 380px;
+	height: 55vh;
+	position: relative;
+	margin: 6% auto;
+	background: var(--musgo);
+	padding: 5px;
+	overflow: hidden;
+	border-radius: 3%;
+}
+
+.button-box {
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	/* box-shadow: 1px 1px 1px 1px var(--amarelo); */
+	border-radius: 30px;
+	background: var(--amarelo);
+}
+
+.toggle-btn {
+	padding: 10px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+	padding-left: 14%;
+}
+
+#btn-entrar {
+	color: #ffffff;
+}
+
+#btn-cadastrar {
+	color: #000000;
+}
+
+#btn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 55%;
+	height: 100%;
+	background: var(--verde);
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.forms {
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+
+.forms.register {
+	top: 21%;
+}
+
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	padding-left: 5px;
+	margin: 5px 0;
+	margin-bottom: 5%;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid var(--amarelo);
+	outline: none;
+	background: transparent;
+	color: var(--amarelo);
+}
+
+
+input {
+	margin-top: 10px;
+	font-family: 'Inter', sans-serif;
+}
+
+.btn-submit {
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	margin-top: 8%;
+	background: var(--verde);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+	color: #000000;
+}
+
+#formLogin {
+	left: 50px;
+}
+
+#formRegister {
+	left: 450px;
+}
+
+
+@media (max-width: 858px) {	
+	.form-box {
+		width: 380px;
+		height: 480px;
+		position: relative;
+		margin: 20% auto;
+		background: var(--musgo);
+		padding: 5px;
+		overflow: hidden;
+	}
+}
+
+
 footer {
-    background: var(--verde);
-    position: absolute;
+    background: var(--musgo);
+    position: relative;
     width: 100%;
-    bottom: 0;
     height: 4%;
     text-align: center;
     padding-top: 1%;

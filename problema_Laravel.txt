@@ -1,0 +1,4 @@
+- Ver a versão do PHP e Composer
+- na pasta raiz rodar "composer update"
+- renomear o arquivo .env.example -> .env
+- na pasta raiz rodar "php artisan key:generate"
