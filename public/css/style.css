@@ -14,7 +14,7 @@
 }
 
 body{
-    background-color: var(--bege);
+    background-color: var(--bege);	 
 }
 
 .nav-menu {
@@ -90,8 +90,8 @@ h1 {
     padding: 0;
     margin-top: 2%;
 
-    background: var(--verde);
-    border: solid 2px var(--verde);
+    background: var(--musgo);
+    border: solid 2px var(--musgo);
 
     cursor: pointer;
     font-size: 1rem;
@@ -99,21 +99,44 @@ h1 {
 }
 
 .div-inputs .btn-salvar:hover {
-    background: var(--musgo);
-    border: solid 2px var(--musgo);
+    background: var(--verde);
+    border: solid 2px var(--verde);
     transition: 1s;
 }
 
 /* Pagina Home */
 
-.sec-home {
-	text-align: center;
+.sec-carrossel {
+	display: flex;
+	justify-content: center;
+	margin: 4%;
+}
+
+.div-carrossel {	
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	border: 3px solid var(--musgo);
+	border-radius: 8px;
+}
+
+.carrossel-container {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	transform: translateX(0);
 }
 
 .imgPrincipal {
-	max-width: 700px;
-	max-height: 350px;
-	margin: 5%;
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+	opacity: 0.9;
+	transition: 0.5s;
+}
+
+.imgPrincipal:hover {
+	opacity: 1;
+	transition: 0.5s;
 }
 
 
@@ -208,7 +231,7 @@ input {
 	display: block;
 	margin: auto;
 	margin-top: 8%;
-	background: var(--verde);
+	background: var(--amarelo);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
@@ -239,7 +262,8 @@ input {
 
 footer {
     background: var(--musgo);
-    position: relative;
+    position: absolute;
+	 bottom: 0;
     width: 100%;
     height: 4%;
     text-align: center;
