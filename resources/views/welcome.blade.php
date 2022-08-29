@@ -9,7 +9,7 @@
 			<img src="{{url('images/peaky_blinders.jpg')}}" alt="" class="imgPrincipal">
 			<img src="{{url('images/casa_papel.jpg')}}" alt="" class="imgPrincipal">
 			<img src="{{url('images/stranger_things.jpg')}}" alt="" class="imgPrincipal">
-			<img src="{{url('images/marvel2.jpg')}}" alt="" class="imgPrincipal">
+			<img src="{{url('images/dc.jpg')}}" alt="" class="imgPrincipal">
 		</div>
 	</div>
 </section>

@@ -34,6 +34,7 @@
 			<input type="submit" value="Salvar" class="btn-salvar">
 		</div>
 	</form>
+	
 </section>
 
 @endsection
