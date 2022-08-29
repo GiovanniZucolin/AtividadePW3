@@ -1,6 +1,7 @@
 @extends('templates.default')
 @section('content')
 
+
 <section>
 
 	<h1> Cadastre a Categoria </h1>
@@ -21,5 +22,6 @@
 	</form>
 
 </section>
+
 
 @endsection

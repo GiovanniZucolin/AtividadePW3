@@ -1,6 +1,7 @@
 @extends('templates.default')
 @section('content')
 
+
 <section>
 
 	<h1> Consultar Pedidos </h1>
@@ -30,5 +31,6 @@
 	</form>
 
 </section>
+
 
 @endsection
