@@ -34,3 +34,6 @@ Route::get('/pedido', function () {
 Route::get('/categoria', function () {
     return view('categoria');
 });
+
+
+Route::get('/contato', 'ContatoController@index');

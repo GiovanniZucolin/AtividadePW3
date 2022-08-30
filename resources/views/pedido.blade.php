@@ -13,12 +13,12 @@
 		</div>
 
 		<div class="div-inputs">
-			<input type="text" placeholder="Pedido" name="txProduto">
+			<input type="text" placeholder="Nome Cliente" name="txNomeCliente">
 		</div>
-		
+
 		<div class="div-inputs">
-			<input type="text" placeholder="Valor" name="txValor" value="">
-		</div>
+			<input type="text" placeholder="Pedido" name="txPedido">
+		</div>			
 		
 		<div class="div-inputs">
 			<label for="dataPedido">Data do Pedido</label> <br />
