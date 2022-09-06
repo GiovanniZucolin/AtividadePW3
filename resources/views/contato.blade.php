@@ -25,4 +25,16 @@
 	</div>
 </form>
 
+<section>
+
+	@foreach($contato as $c)
+	    <h1> {{$c->idContato}} </h1>
+	    <p> {{$c->nome}} </p>
+	    <p> {{$c->email}} </P>
+		<p> {{$c->assunto}} </P>
+		<p> {{$c->mensagem}} </P>
+	@endforeach
+
+</section>
+
 @endsection

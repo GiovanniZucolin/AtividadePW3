@@ -77,6 +77,34 @@ LOCK TABLES `tbcliente` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tbcontato`
+--
+
+DROP TABLE IF EXISTS `tbcontato`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbcontato` (
+  `idContato` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `assunto` varchar(50) DEFAULT NULL,
+  `mensagem` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idContato`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbcontato`
+--
+
+LOCK TABLES `tbcontato` WRITE;
+/*!40000 ALTER TABLE `tbcontato` DISABLE KEYS */;
+INSERT INTO `tbcontato` VALUES (1,'Barbara','babi@gmail.com','11 94345-3295','Atraso na entrega','A entrega está atrasada 5 dias'),(2,'Ana','aninha@gmail.com','11 96011-8074','Produto de boa qualidade','Ótimo produto, porém a entrega demorou um pouco');
+/*!40000 ALTER TABLE `tbcontato` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tbpedido`
 --
 
@@ -146,4 +174,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-16 11:30:15
+-- Dump completed on 2022-09-06 11:07:08

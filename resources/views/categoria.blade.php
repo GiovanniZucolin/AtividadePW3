@@ -6,11 +6,7 @@
 
 	<h1> Cadastre a Categoria </h1>
 
-	<form action="categoria-salvar.php" method="post" class="form-produtos">
-
-		<div class="div-inputs">
-			<input type="number" name="idCategoria" placeholder="Id Cateoria">
-		</div>
+	<form action="categoria-salvar.php" method="post" class="form-produtos">		
 
 		<div class="div-inputs">
 			<input type="text" placeholder="Categoria" name="txCategoria">
@@ -19,6 +15,7 @@
 		<div class="div-inputs">
 			<input type="submit" value="Salvar" class="btn-salvar">
 		</div>
+		
 	</form>
 
 </section>

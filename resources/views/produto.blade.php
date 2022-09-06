@@ -5,11 +5,7 @@
 
 	<h1> Cadastre o Produto </h1>
 
-	<form action="" method="post" class="form-produtos">
-
-		<div class="div-inputs">
-			<input type="number" name="idProduto">
-		</div>
+	<form action="" method="post" class="form-produtos">		
 
 		<div class="div-inputs">
 			<input type="text" placeholder="Produto" name="txProduto">

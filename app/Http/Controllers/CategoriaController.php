@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ContatoModel;
+use App\CategoriaModel;
 
-class ContatoController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,21 +14,12 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        // $contato = ContatoModel::all();
+        $categoria = CategoriaModel::all();
 
-        // foreach($contato as $c) {
-        //     echo "<h1> Id ". $c->idContato . "</h1> <br />";
-        //     echo "<br /> Nome: ". $c->nome;
-        //     echo "<br /> E-mail: ". $c->email;
-        //     echo "<br /> Telefone: ". $c->telefone;
-        //     echo "<br /> Assunto: ". $c->assunto;
-        //     echo "<br /> Mensagem: ". $c->mensagem;
-        // }
-
-        $contato = ContatoModel::all();        
-        return view('contato',compact('contato'));
-
-
+        foreach($categoria as $cat) {
+            echo "Id ". $cat->idCategoria . "<br />";
+            echo "Categoria ". $cat->categoria . "<br />";
+        }
     }
 
     /**

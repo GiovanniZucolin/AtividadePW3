@@ -2,3 +2,4 @@
 - na pasta raiz rodar "composer update"
 - renomear o arquivo .env.example -> .env
 - na pasta raiz rodar "php artisan key:generate"
+- configurar o arquivo .env para conectar com o BD
