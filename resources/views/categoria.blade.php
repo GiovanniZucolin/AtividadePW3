@@ -2,7 +2,7 @@
 @section('content')
 
 
-<section>
+<section class="sec-categoria">
 
 	<h1> Cadastre a Categoria </h1>
 
@@ -17,6 +17,21 @@
 		</div>
 		
 	</form>
+
+	<div class="table-categoria">
+	<table border="1" rules="all">
+		<tr>
+			<th> Id </th>
+			<th> Categoria </th>
+		</tr>
+		@foreach($categoria as $cat)
+	    <tr>
+			<td> {{$cat->idCategoria}} </td>
+			<td> {{$cat->categoria}} </td>
+		</tr>	
+		@endforeach
+	</table>
+	</div>
 
 </section>
 

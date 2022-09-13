@@ -27,13 +27,26 @@
 
 <section>
 
-	@foreach($contato as $c)
-	    <h1> {{$c->idContato}} </h1>
-	    <p> {{$c->nome}} </p>
-	    <p> {{$c->email}} </P>
-		<p> {{$c->assunto}} </P>
-		<p> {{$c->mensagem}} </P>
-	@endforeach
+<div class="table-categoria">
+	<table border="1" rules="all">
+		<tr>
+			<th> Id </th>
+			<th> Nome </th>
+			<th> Email </th>
+			<th> Assunto </th>
+			<th> Mensagem </th>
+		</tr>
+		@foreach($contato as $c)
+	    <tr>
+			<td> {{$c->idContato}} </td>
+			<td> {{$c->nome}} </td>
+			<td> {{$c->email}} </td>
+			<td> {{$c->assunto}} </td>
+			<td> {{$c->mensagem}} </td>
+		</tr>	
+		@endforeach
+	</table>
+	</div>
 
 </section>
 

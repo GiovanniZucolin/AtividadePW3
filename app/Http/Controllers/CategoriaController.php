@@ -15,11 +15,7 @@ class CategoriaController extends Controller
     public function index()
     {
         $categoria = CategoriaModel::all();
-
-        foreach($categoria as $cat) {
-            echo "Id ". $cat->idCategoria . "<br />";
-            echo "Categoria ". $cat->categoria . "<br />";
-        }
+        return view('categoria', compact('categoria'));
     }
 
     /**

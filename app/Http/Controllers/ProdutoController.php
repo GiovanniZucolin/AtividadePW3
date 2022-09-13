@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ContatoModel;
 
-class ContatoController extends Controller
+class ProdutoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,11 +12,8 @@ class ContatoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        
-
-        $contato = ContatoModel::all();        
-        return view('contato', compact('contato'));
-
+    {
+        //
     }
 
     /**

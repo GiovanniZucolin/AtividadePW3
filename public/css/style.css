@@ -253,6 +253,23 @@ input {
 }
 
 
+/* Página Categoria */
+.sec-categoria {
+	text-align: center;
+}
+
+.table-categoria {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.table-categoria table {
+	width: 500px;
+	margin-top: 4%;
+}
+
 @media (max-width: 858px) {	
 	.form-box {
 		width: 380px;
