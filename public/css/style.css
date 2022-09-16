@@ -47,6 +47,14 @@ h1 {
     font-size: 32px;
 }
 
+table {
+	width: 1100px;	
+}
+
+td {
+	font-size: 14px;
+	padding: 5px;
+}
 
 /* Pagina Produtos */
 

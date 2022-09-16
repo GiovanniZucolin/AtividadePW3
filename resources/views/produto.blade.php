@@ -33,4 +33,27 @@
 	
 </section>
 
+<section>
+
+<div class="table-categoria">
+	<table border="1" rules="all">
+		<tr>
+			<th> Id Produto </th>
+			<th> Id Categoria </th>
+			<th> Produto </th>
+			<th> Valor </th>			
+		</tr>
+		@foreach($produto as $prod)
+	    <tr>
+			<td width="100px" align="center"> {{$prod->idProduto}} </td>
+			<td width="100px" align="center"> {{$prod->idCategoria}} </td>
+			<td width="450px"> {{$prod->produto}} </td>
+			<td width="450px"> {{$prod->valor}} </td>			
+		</tr>	
+		@endforeach
+	</table>
+</div>
+
+</section>
+
 @endsection

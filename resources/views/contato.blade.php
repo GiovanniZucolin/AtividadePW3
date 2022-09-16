@@ -38,15 +38,15 @@
 		</tr>
 		@foreach($contato as $c)
 	    <tr>
-			<td> {{$c->idContato}} </td>
-			<td> {{$c->nome}} </td>
-			<td> {{$c->email}} </td>
-			<td> {{$c->assunto}} </td>
-			<td> {{$c->mensagem}} </td>
+			<td width="50px" align="center"> {{$c->idContato}} </td>
+			<td width="100px" align="center"> {{$c->nome}} </td>
+			<td width="100px"> {{$c->email}} </td>
+			<td width="400px"> {{$c->assunto}} </td>
+			<td width="450px"> {{$c->mensagem}} </td>
 		</tr>	
 		@endforeach
 	</table>
-	</div>
+</div>
 
 </section>
 

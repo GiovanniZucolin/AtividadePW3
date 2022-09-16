@@ -39,3 +39,5 @@ Route::get('/categoria', function () {
 Route::get('/contato', 'ContatoController@index');
 
 Route::get('/categoria','CategoriaController@index');
+
+Route::get('/produto','ProdutoController@index');
