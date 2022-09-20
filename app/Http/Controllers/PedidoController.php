@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ContatoModel;
+use App\PedidoModel;
 
-class ContatoController extends Controller
+class PedidoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,11 +13,9 @@ class ContatoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        
-
-        $contato = ContatoModel::all();        
-        return view('contato', compact('contato'));
-
+    {
+        $pedido = PedidoModel::all();
+        return view('pedido', compact('pedido'));
     }
 
     /**
@@ -38,17 +36,7 @@ class ContatoController extends Controller
      */
     public function store(Request $request)
     {
-        $contato = new ContatoModel();
-
-        $contato->nome = $request->txNome;
-        $contato->email = $request->txEmail;
-        $contato->telefone = $request->txTelefone;
-        $contato->assunto = $request->txAssunto;
-        $contato->mensagem = $request->txMensagem;
-        
-        $contato->save();
-
-        return redirect("/contato");
+        //
     }
 
     /**

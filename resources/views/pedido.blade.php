@@ -32,5 +32,28 @@
 
 </section>
 
+<section>
+
+<div class="table-categoria">
+	<table border="1" rules="all">
+		<tr>
+			<th> Id Pedido </th>
+			<th> Id Produto </th>
+			<th> Id Cliente </th>
+			<th> Data do Pedido </th>			
+		</tr>
+		@foreach($pedido as $ped)
+	    <tr>
+			<td align="center"> {{$ped->idPedido}} </td>
+			<td align="center"> {{$ped->idProduto}} </td>
+			<td align="center"> {{$ped->idCliente}} </td>
+			<td> {{$ped->dtPedito}} </td>			
+		</tr>	
+		@endforeach
+	</table>
+</div>
+
+</section>
+
 
 @endsection

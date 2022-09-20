@@ -65,7 +65,7 @@ CREATE TABLE `tbcliente` (
   `fone` varchar(9) DEFAULT NULL,
   `celular` varchar(14) DEFAULT NULL,
   PRIMARY KEY (`idCliente`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,6 +74,7 @@ CREATE TABLE `tbcliente` (
 
 LOCK TABLES `tbcliente` WRITE;
 /*!40000 ALTER TABLE `tbcliente` DISABLE KEYS */;
+INSERT INTO `tbcliente` VALUES (1,'Steve Jobs','1989-02-23','Solteiro','Rua da Mooca',212,'Apt 87','03426-000','São Paulo','SP','17.570.382-6','302.494.830-92','steve@gmail.com','2548-9872','11 98601-3474');
 /*!40000 ALTER TABLE `tbcliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +93,7 @@ CREATE TABLE `tbcontato` (
   `assunto` varchar(50) DEFAULT NULL,
   `mensagem` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idContato`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +102,7 @@ CREATE TABLE `tbcontato` (
 
 LOCK TABLES `tbcontato` WRITE;
 /*!40000 ALTER TABLE `tbcontato` DISABLE KEYS */;
-INSERT INTO `tbcontato` VALUES (1,'Barbara','babi@gmail.com','11 94345-3295','Atraso na entrega','A entrega está atrasada 5 dias'),(2,'Ana','aninha@gmail.com','11 96011-8074','Produto de boa qualidade','Ótimo produto, porém a entrega demorou um pouco');
+INSERT INTO `tbcontato` VALUES (1,'Barbara','babi@gmail.com','11 94345-3295','Atraso na entrega','A entrega está atrasada 5 dias'),(2,'Ana','aninha@gmail.com','11 96011-8074','Produto de boa qualidade','Ótimo produto, porém a entrega demorou um pouco'),(5,'Steve Jobs','steve@gmail.com','11 97621-0918','Atendimento muito eficiente','testatrasdasdas');
 /*!40000 ALTER TABLE `tbcontato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +121,7 @@ CREATE TABLE `tbpedido` (
   PRIMARY KEY (`idPedido`),
   KEY `idProduto` (`idProduto`),
   KEY `idCliente` (`idCliente`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,6 +130,7 @@ CREATE TABLE `tbpedido` (
 
 LOCK TABLES `tbpedido` WRITE;
 /*!40000 ALTER TABLE `tbpedido` DISABLE KEYS */;
+INSERT INTO `tbpedido` VALUES (1,3,1,'2022-09-14 00:00:00');
 /*!40000 ALTER TABLE `tbpedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +148,7 @@ CREATE TABLE `tbproduto` (
   `valor` float(6,2) DEFAULT NULL,
   PRIMARY KEY (`idProduto`),
   KEY `idCategoria` (`idCategoria`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,6 +157,7 @@ CREATE TABLE `tbproduto` (
 
 LOCK TABLES `tbproduto` WRITE;
 /*!40000 ALTER TABLE `tbproduto` DISABLE KEYS */;
+INSERT INTO `tbproduto` VALUES (1,1,'Camiseta Star Wars IV',75.00),(2,2,'Chaveiro Pokemon - Muk',39.99),(3,3,'Caneca Marvel - Thor',83.40),(4,4,'Chaves - Boneco Colecionador',337.89);
 /*!40000 ALTER TABLE `tbproduto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -175,4 +178,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-13 11:49:53
+-- Dump completed on 2022-09-20 11:56:34
