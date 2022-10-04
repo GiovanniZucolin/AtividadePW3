@@ -39,9 +39,16 @@ Route::get('/categoria', function () {
 Route::get('/contato', 'ContatoController@index');
 
 Route::get('/categoria','CategoriaController@index');
+Route::get('/categoria/{id}','CategoriaController@destroy');
 
 Route::get('/produto','ProdutoController@index');
 
 Route::get('/pedido','PedidoController@index');
 
 Route::post('/contato/inserir','ContatoController@store');
+
+Route::post('/categoria/inserir','CategoriaController@store');
+
+Route::post('/pedido/inserir','PedidoController@store');
+
+Route::post('/produto/inserir','ProdutoController@store');

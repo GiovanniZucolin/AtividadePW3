@@ -36,7 +36,13 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categoria = new CategoriaModel();
+
+        $categoria->categoria = $request->txCategoria;
+        
+        $categoria->save();
+
+        return redirect("/categoria");
     }
 
     /**
@@ -81,6 +87,7 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        CategoriaModel::where('idCategoria', $id)->delete();
+        return redirect("/categoria");
     }
 }

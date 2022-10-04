@@ -6,23 +6,20 @@
 
 	<h1> Consultar Pedidos </h1>
 
-	<form action="" method="post" class="form-produtos">
+	<form action="{{url('/pedido/inserir')}}" method="post" class="form-produtos">
+	{{csrf_field()}}
 
 		<div class="div-inputs">
-			<input type="number" name="idPedido" placeholder="id pedido">
+			<input type="text" placeholder="Id Produto" name="txidProduto">
 		</div>
 
 		<div class="div-inputs">
-			<input type="text" placeholder="Nome Cliente" name="txNomeCliente">
-		</div>
-
-		<div class="div-inputs">
-			<input type="text" placeholder="Pedido" name="txPedido">
+			<input type="text" placeholder="Id Cliente" name="txidCliente">
 		</div>			
 		
 		<div class="div-inputs">
 			<label for="dataPedido">Data do Pedido</label> <br />
-			<input type="date" id="dataPedido">
+			<input type="date" id="dataPedido" name="dataPedido">>
 		</div>
 
 		<div class="div-inputs">			

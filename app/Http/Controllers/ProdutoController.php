@@ -36,7 +36,15 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produto = new ProdutoModel();
+
+        $produto->idCategoria = $request->txCategoria;
+        $produto->produto = $request->txProduto;
+        $produto->valor = $request->txValor;
+        
+        $produto->save();
+
+        return redirect("/produto");
     }
 
     /**

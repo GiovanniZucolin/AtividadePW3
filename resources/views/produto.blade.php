@@ -5,17 +5,15 @@
 
 	<h1> Cadastre o Produto </h1>
 
-	<form action="" method="post" class="form-produtos">		
+	<form action="{{url('/produto/inserir')}}" method="post" class="form-produtos">
+	{{csrf_field()}}	
 
 		<div class="div-inputs">
-			<input type="text" placeholder="Produto" name="txProduto">
+			<input type="text" placeholder="Categoria" name="txCategoria" value="">
 		</div>
 
 		<div class="div-inputs">
-			Categoria:
-			<select name="SelectCategoria" id="IdCategoria">
-				<option value=""> Teste </option>		
-			</select>
+			<input type="text" placeholder="Produto" name="txProduto">
 		</div>
 
 		<div class="div-inputs">
