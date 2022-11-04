@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ProdutoModel;
+use DB;
 
 class ProdutoController extends Controller
 {
@@ -53,9 +54,39 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+
+        $nomeProduto = $request->txProduto;
+
+        if (isset($request->valorMin))
+            $valorMin = $request->valorMin;
+        else 
+            $valorMin = 0;
+        
+        if (isset($request->valorMax))            
+            $valorMax = $request->valorMax;
+        else 
+            $valorMax = 0;    
+
+        
+        if ($valorMax > $valorMin) {
+            $produto = DB::table('tbproduto')->where('produto', 'like', '%'. $nomeProduto .'%')
+            ->whereBetween('valor', array($valorMin , $valorMax))
+            ->join('tbcategoria', 'tbproduto.idCategoria', '=', 'tbcategoria.idCategoria')
+            ->select('categoria', 'produto', 'valor')->get();
+        } elseif ($valorMin > 0) {
+            $produto = DB::table('tbproduto')->where('produto', 'like', '%'. $nomeProduto .'%')
+            ->where('valor','>=' , $valorMin)
+            ->join('tbcategoria', 'tbproduto.idCategoria', '=', 'tbcategoria.idCategoria')
+            ->select('categoria', 'produto', 'valor')->get();
+        } else {
+            $produto = DB::table('tbproduto')->where('produto', 'like', '%'. $nomeProduto .'%')
+            ->join('tbcategoria', 'tbproduto.idCategoria', '=', 'tbcategoria.idCategoria')
+            ->select('categoria', 'produto', 'valor')->get();
+        }
+
+        return view('welcome', compact('produto'));
     }
 
     /**

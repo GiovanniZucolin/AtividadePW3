@@ -14,6 +14,51 @@
 	</div>
 </section>
 
+<section class="sec-pesquisa">
+	<div class="div-pesquisa">
+		<h2>Pesquisar Produto</h2>
+
+		<form action="{{url('/welcome/pesquisa')}}" method="post">	
+		{{csrf_field()}}		
+		 	<div class="div-inputs">
+				<input type="text" name="txProduto" placeholder="Produto" /> <br>
+			</div>
+
+			<div class="div-inputs">
+				<input type="number" name="valorMin" placeholder="Valor Min." /> <br>
+			</div>
+
+			<div class="div-inputs">
+				<input type="number" name="valorMax" placeholder="Valor Max." /> <br>
+			</div>
+
+			<div class="div-inputs">
+				<input type="submit" value="Pesquisar">
+			</div>
+		</form>
+	</div>
+
+	@isset($produto)
+	<div class="table-categoria">
+	<table border="1" rules="all">
+		<tr>
+			<th> Categoria </th>
+			<th> Produto </th>
+			<th> Valor </th>			
+		</tr>
+		@foreach($produto as $prod)
+	    <tr>
+			<td width="100px" align="center"> {{$prod->categoria}} </td>
+			<td width="450px"> {{$prod->produto}} </td>
+			<td width="450px"> {{$prod->valor}} </td>			
+		</tr>	
+		@endforeach
+	</table>
+	</div>
+	@endisset
+
+</section>
+
 <script>
 	const imgs = document.getElementById("img");
 	const img = document.querySelectorAll("#img img");

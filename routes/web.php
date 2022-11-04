@@ -52,3 +52,5 @@ Route::post('/categoria/inserir','CategoriaController@store');
 Route::post('/pedido/inserir','PedidoController@store');
 
 Route::post('/produto/inserir','ProdutoController@store');
+
+Route::post('/welcome/pesquisa', 'ProdutoController@show');
