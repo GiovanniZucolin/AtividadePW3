@@ -40,6 +40,8 @@ Route::get('/contato', 'ContatoController@index');
 
 Route::get('/categoria','CategoriaController@index');
 Route::get('/categoria/{id}','CategoriaController@destroy');
+Route::get('/categoria-editar/{id}/editar','CategoriaController@edit');
+Route::post('/categoria-alterar/{id}', 'CategoriaController@update');
 
 Route::get('/produto','ProdutoController@index');
 

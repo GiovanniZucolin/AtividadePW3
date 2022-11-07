@@ -11,4 +11,6 @@ class CategoriaModel extends Model
     protected $fillable = ['idCategoria', 'categoria'];
 
     public $timestamps = false;
+
+    protected $primaryKey = 'idCategoria';
 }

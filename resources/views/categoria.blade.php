@@ -24,13 +24,15 @@
 		<tr>
 			<th> Id </th>
 			<th> Categoria </th>
-			<th> $nbsp; </th>
+			<th> &nbsp </th>
+			<th> &nbsp </th>
 		</tr>
 		@foreach($categoria as $cat)
 	    <tr>
 			<td> {{$cat->idCategoria}} </td>
 			<td> {{$cat->categoria}} </td>
-			<td> <a href="/contato/{{$cat->idCategoria}}"> Excluir </a> </td>
+			<td> <a href="/categoria/{{$cat->idCategoria}}"> Excluir </a> </td>
+			<td> <a href="/categoria-editar/{{$cat->idCategoria}}/editar"> Editar </a> </td>
 		</tr>	
 		@endforeach
 	</table>
