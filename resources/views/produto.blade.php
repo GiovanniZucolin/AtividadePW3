@@ -39,14 +39,18 @@
 			<th> Id Produto </th>
 			<th> Id Categoria </th>
 			<th> Produto </th>
-			<th> Valor </th>			
+			<th> Valor</th>		
+			<th> &nbsp </th>
+			<th> &nbsp </th>	
 		</tr>
 		@foreach($produto as $prod)
 	    <tr>
 			<td width="100px" align="center"> {{$prod->idProduto}} </td>
 			<td width="100px" align="center"> {{$prod->idCategoria}} </td>
 			<td width="450px"> {{$prod->produto}} </td>
-			<td width="450px"> {{$prod->valor}} </td>			
+			<td width="450px"> R${{$prod->valor}} </td>
+			<td> <a href="/produto/{{$prod->idProduto}}"> Excluir </a> </td>
+			<td> <a href="/produto-editar/{{$prod->idProduto}}/editar"> Editar </a> </td>
 		</tr>	
 		@endforeach
 	</table>

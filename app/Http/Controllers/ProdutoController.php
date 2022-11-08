@@ -97,7 +97,9 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produto = ProdutoModel::find($id);
+        $title = "Editar produto - {$produto->produto}";
+        return view ('produtoEditar', compact('title','produto'));
     }
 
     /**
@@ -109,7 +111,11 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $produto = ProdutoModel::find($id);
+        $produto->update(['idCategoria'=>$request->txCategoria]);
+        $produto->update(['produto'=>$request->txProduto]);
+        $produto->update(['valor'=>$request->txValor]);
+        return redirect("/produto");
     }
 
     /**
@@ -120,6 +126,7 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ProdutoModel::where('idProduto', $id)->delete();
+        return redirect("/produto");
     }
 }

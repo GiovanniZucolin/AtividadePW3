@@ -16,7 +16,7 @@
 
 <section class="sec-pesquisa">
 	<div class="div-pesquisa">
-		<h2>Pesquisar Produto</h2>
+		<h1>Pesquisar Produto</h1>
 
 		<form action="{{url('/welcome/pesquisa')}}" method="post">	
 		{{csrf_field()}}		
@@ -50,7 +50,7 @@
 	    <tr>
 			<td width="100px" align="center"> {{$prod->categoria}} </td>
 			<td width="450px"> {{$prod->produto}} </td>
-			<td width="450px"> {{$prod->valor}} </td>			
+			<td width="450px"> R${{$prod->valor}} </td>			
 		</tr>	
 		@endforeach
 	</table>
@@ -74,7 +74,7 @@
 		imgs.style.transform = `translateX(${-id * 500}px)`;
 	}
 
-	setInterval(carrosel, 4000);
+	setInterval(carrosel, 5000);
 </script>
 
 @endsection

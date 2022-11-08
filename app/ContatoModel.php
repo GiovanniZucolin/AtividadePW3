@@ -11,4 +11,6 @@ class ContatoModel extends Model
     protected $fillable = ['idContato', 'nome', 'email', 'telefone', 'assunto', 'mensagem'];
 
     public $timestamps = false;
+
+    protected $primaryKey = 'idContato';
 }

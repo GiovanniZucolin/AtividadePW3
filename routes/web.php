@@ -37,6 +37,9 @@ Route::get('/categoria', function () {
 
 
 Route::get('/contato', 'ContatoController@index');
+Route::get('/contato/{id}','ContatoController@destroy');
+Route::get('/contato-editar/{id}/editar','ContatoController@edit');
+Route::post('/contato-alterar/{id}', 'ContatoController@update');
 
 Route::get('/categoria','CategoriaController@index');
 Route::get('/categoria/{id}','CategoriaController@destroy');
@@ -44,6 +47,9 @@ Route::get('/categoria-editar/{id}/editar','CategoriaController@edit');
 Route::post('/categoria-alterar/{id}', 'CategoriaController@update');
 
 Route::get('/produto','ProdutoController@index');
+Route::get('/produto/{id}','ProdutoController@destroy');
+Route::get('/produto-editar/{id}/editar','ProdutoController@edit');
+Route::post('/produto-alterar/{id}', 'ProdutoController@update');
 
 Route::get('/pedido','PedidoController@index');
 

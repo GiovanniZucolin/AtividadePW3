@@ -43,6 +43,8 @@
 			<th> Telefone </th>
 			<th> Assunto </th>
 			<th> Mensagem </th>
+			<th> &nbsp </th>
+			<th> &nbsp </th>
 		</tr>
 		@foreach($contato as $c)
 	    <tr>
@@ -52,6 +54,8 @@
 			<td> {{$c->telefone}} </td>
 			<td> {{$c->assunto}} </td>
 			<td> {{$c->mensagem}} </td>
+			<td> <a href="/contato/{{$c->idContato}}"> Excluir </a> </td>
+			<td> <a href="/contato-editar/{{$c->idContato}}/editar"> Editar </a> </td>
 		</tr>	
 		@endforeach
 	</table>

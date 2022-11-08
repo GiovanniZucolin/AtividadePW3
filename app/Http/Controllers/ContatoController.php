@@ -70,7 +70,9 @@ class ContatoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contato = ContatoModel::find($id);
+        $title = "Editar contato - {$contato->contato}";
+        return view ('contatoEditar', compact('title','contato'));
     }
 
     /**
@@ -82,7 +84,13 @@ class ContatoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $contato = ContatoModel::find($id);
+        $contato->update(['nome'=>$request->txNome]);
+        $contato->update(['email'=>$request->txEmail]);
+        $contato->update(['telefone'=>$request->txTelefone]);
+        $contato->update(['assunto'=>$request->txAssunto]);
+        $contato->update(['mensagem'=>$request->txMensagem]);
+        return redirect("/contato");
     }
 
     /**
@@ -93,6 +101,7 @@ class ContatoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ContatoModel::where('idContato', $id)->delete();
+        return redirect("/contato");
     }
 }
