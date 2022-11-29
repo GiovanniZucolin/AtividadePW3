@@ -3,7 +3,7 @@
 
 <h1>Entre em Contato</h1>
 
-<form action="{{url('/contato/inserir')}}" method="post" class="form-produtos">
+<form action="{{url('/api/contato')}}" method="post" class="form-produtos">
 	{{csrf_field()}}
 
 
@@ -45,6 +45,7 @@
 			<th> Mensagem </th>
 			<th> &nbsp </th>
 			<th> &nbsp </th>
+			<th> &nbsp </th>
 		</tr>
 		@foreach($contato as $c)
 	    <tr>
@@ -56,6 +57,7 @@
 			<td> {{$c->mensagem}} </td>
 			<td> <a href="/contato/{{$c->idContato}}"> Excluir </a> </td>
 			<td> <a href="/contato-editar/{{$c->idContato}}/editar"> Editar </a> </td>
+			<td> <a href="/api/contato/{{$c->idContato}}"> JSON </a> </td>
 		</tr>	
 		@endforeach
 	</table>

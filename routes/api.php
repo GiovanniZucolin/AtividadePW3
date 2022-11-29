@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/contato','ContatoController@contatos');
+
+Route::get('/contato/{id}','ContatoController@contatoById');
+
+Route::post('/contato','ContatoController@contatoSalvar');
+
+Route::delete('/contato/{id}','App\Http\Controllers\ContatoController@deleteContatoById');
